@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.route.test.hungrydemo.controler.MapActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#58A7F2">
+        <ImageView
+            android:id="@+id/map_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/go_back"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前你的位置"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_marginLeft="70dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <com.amap.api.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/mapview"></com.amap.api.maps.MapView>
+</LinearLayout>

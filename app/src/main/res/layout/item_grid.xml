@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/img_home"/>
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:gravity="center_horizontal"
+            android:id="@+id/name_home"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

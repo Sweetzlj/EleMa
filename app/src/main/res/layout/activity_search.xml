@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.route.test.hungrydemo.controler.SearchActivity">
+    <LinearLayout
+        android:id="@+id/ll_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#553190E8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_title_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/home_search"/>
+            <EditText
+                android:id="@+id/et_search2"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:background="@drawable/home_search_text_background"
+                android:hint="搜索你感兴趣的内容"
+                android:paddingLeft="8dp"
+                android:textColorHint="#fff"
+                android:textSize="15dp"></EditText>
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/tv_quxiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="left|center_vertical"
+                    android:text="搜索历史" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"></View>
+
+                <com.route.test.hungrydemo.view.MyListView
+                    android:id="@+id/lv_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.route.test.hungrydemo.view.MyListView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"></View>
+
+            <TextView
+                android:id="@+id/tv_clear"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F6F6F6"
+                android:gravity="center"
+                android:text="清除搜索历史" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="#EEEEEE"></View>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

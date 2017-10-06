@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.route.test.hungrydemo"
+        minSdkVersion 18
+        targetSdkVersion 26
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    greendao {
+        schemaVersion 1
+        targetGenDir 'src/main/java'
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //详情联动列表stickylistheaders
+
+    //悬浮按钮
+
+    // add library
+
+    compile files('libs/MobCommons-2017.0607.1736.jar')
+    compile files('libs/MobTools-2017.0607.1736.jar')
+    compile name: 'SMSSDK-3.0.0', ext: 'aar'
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile files('libs/SocialSDK_Sina_Simplify.jar')
+    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_social_shareview.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'org.xutils:xutils:3.5.0'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.squareup.okhttp3:okhttp:3.3.0'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.jude:rollviewpager:1.4.6'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.androidkun:pulltorefreshrecyclerview:1.0.6'
+    compile 'org.zackratos:ultimatebar:1.0.3'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'org.greenrobot:greendao:3.2.2'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.allenliu.badgeview:library:1.0.4'
+    compile 'com.zhy:autolayout:1.4.3'
+    compile 'com.zhy:percent-support-extends:1.0.1'
+    compile 'com.teprinciple:updateapputils:1.1'
+}
